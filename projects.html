@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Shruti Pol</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Shruti Pol</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects">
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>SPPU DSA study material</h3>
+        <p>An advanced website that provides dsa study material also generate question paper on basis of user requirement.</p>
+        <a href="https://github.com/786Shruti/SPPU-DSA-study-material-website" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-item">
+        <h3>To-Do List Application</h3>
+        <p>A dynamic to-do list application integrated with AWS Lambda and DynamoDB for serverless backend support.</p>
+        <a href="http://your-todo-app-frontend.s3-website.ap-south-1.amazonaws.com/" target="_blank">Live Demo on AWS Cloud platform.</a>
+      </div>
+      <div class="project-item">
+        <h3>Image Gallery</h3>
+        <p>An advanced image gallery with Responsive Layout, Dynamic Image Addition, Image Modal, Data Persistence.</p>
+        <a href="https://786shruti.github.io/Image-gallery/" target="_blank">Live Demo on GitHub</a>
+      </div>
+      <div class="project-item">
+        <h3>Expense Tracker</h3>
+        <p>A deep-level project to track expenses built using PHP and MySQL(XAMPP).</p>
+        <a href="https://github.com/786Shruti/Expense-Tracker-miniproject" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-item">
+        <h3>Note Making Application</h3>
+        <p>A simple and effective note-taking app with search and save options.</p>
+        <a href="https://786shruti.github.io/Note-making/" target="_blank">Live Demo on GitHub</a>
+      </div>
+      <div class="project-item">
+        <h3>Product Listing Webpage</h3>
+        <p> Product page where users can filter items by categories or
+price, and sort them based on criteria like rating.
+</p>
+        <a href="https://786shruti.github.io/Product-listing-page/" target="_blank">Live Demo on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check saved theme in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>

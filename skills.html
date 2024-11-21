@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Shruti Pol</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Include the navigation bar -->
+  <header>
+    <nav>
+      <div class="logo">Shruti Pol</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div><strong>Programming Languages:</strong> C++, Python, Java</div>
+      <div><strong>Web Development:</strong> HTML, CSS, JavaScript, PHP</div>
+      <div><strong>Databases:</strong> MySQL, Oracle, MongoDB</div>
+      <div><strong>Cloud:</strong> AWS (Basics Certified)</div>
+      <div><strong>Tools & Frameworks:</strong> GitHub</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check saved theme in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>

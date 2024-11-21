@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Shruti Pol</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Include the navigation bar -->
+  <header>
+    <nav>
+      <div class="logo">Shruti Pol</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="IMG20241021124122.jpg" alt="Shruti Pol's Photo" class="profile-photo">
+    <p>I am a passionate computer engineering student with a strong foundation in programming and web development. I have completed various projects that demonstrate my expertise in full-stack development and cloud computing. I am an AWS cloud learner, continuously exploring cutting-edge technologies to enhance my skills.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check saved theme in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>
