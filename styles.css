@@ -175,8 +175,8 @@ footer {
         font-size: 0.8rem; /* Smaller footer text */
     }
     .projects .project-list {
-        grid-template-columns: 1fr; /* Stack projects in one column */
-        gap: 1rem; /* Maintain gap between projects */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust project layout */
+        gap: 1rem;
     }
 }
 
@@ -209,4 +209,3 @@ footer {
         padding: 1rem; /* Reduce padding for project items */
     }
 }
-
