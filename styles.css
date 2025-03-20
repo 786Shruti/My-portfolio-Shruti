@@ -209,3 +209,34 @@ footer {
         padding: 1rem; /* Reduce padding for project items */
     }
 }
+.certifications {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.certifications h2 {
+    text-align: center;
+    color: #333;
+}
+
+.certifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.certifications a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.certifications a:hover {
+    text-decoration: underline;
+}
