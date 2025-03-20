@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Shruti Pol</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Shruti Pol</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certification.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
+    </nav>
+  </header>
+
+ <section id="certifications" class="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>AWS Academy Graduate - AWS Academy Cloud Foundation 
+            <a href="https://drive.google.com/file/d/1d2kUVlh-MDW21kqKfKtaUM7V_MtSGqze/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>AWS Academy Graduate - AWS Academy Cloud Architecting 
+            <a href="https://drive.google.com/file/d/1dD8UTgAg2EdpG30gYFmNOquS9aGKPvBF/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>Node.js Certification 
+            <a href="https://drive.google.com/file/d/1dDmoUQrhQCIoAZm_K1vfL-4-fNEfbFgT/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>React.js Certification 
+            <a href="https://drive.google.com/file/d/1dDf3Rh99dFqJSMsg1gnsAkl65d6harkG/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>WordPress Certification 
+            <a href="https://drive.google.com/file/d/1dGBrq0obFvhYrMM4gOFBu4zZNqbnczo6/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>DSA in C++ Certification 
+            <a href="https://drive.google.com/file/d/1da8RYlobOeThKo4Pj7fn6bv564huTGfZ/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>JavaScript Certification 
+            <a href="https://drive.google.com/file/d/1dcmlCMG689jRFLVjRThDIZ_uc578TbLv/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>PHP for Beginners 
+            <a href="https://drive.google.com/file/d/1dPxS0VngqBMfSflf6XpVBZ_TeSxiFgHZ/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>HTML and CSS Certifications 
+            <a href="https://drive.google.com/file/d/1dfDi9FXjqClv8cEhPfc9kAgmhMIK5Ww0/view?usp=drivesdk" target="_blank">[HTML Certificate]</a> | 
+            <a href="https://drive.google.com/file/d/1dNqWNJaUE-CXQHEA4wYZ2PsUziLuwaka/view?usp=drivesdk" target="_blank">[CSS Certificate]</a>
+        </li>
+        <li>Python Certification 
+            <a href="https://drive.google.com/file/d/1-NIVZsobbIpj1RSwc17ignn1ZwpDOePp/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>C++ Certification 
+            <a href="https://drive.google.com/file/d/1-LiNFdS4IZdO52vPRNGs9JxgqKDCEDuP/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+        <li>C and Python Certifications 
+            <a href="https://drive.google.com/file/d/1dfKF__HiaBCa_XLnQzjfu05OPHfeSBMJ/view?usp=drivesdk" target="_blank">[Certificate]</a>
+        </li>
+    </ul>
+</section>
+
+  <footer>
+    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check saved theme in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>
