@@ -237,6 +237,7 @@ footer {
 .certifications a {
     color: #007bff;
     text-decoration: none;
+    text-align: left;
 }
 
 .certifications a:hover {
