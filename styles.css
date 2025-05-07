@@ -5,6 +5,19 @@
   --link-color: #007acc; /* Light link/button color */
 }
 
+html, body {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+main {
+  flex: 1;
+}
+
 body {
   display: flex;
   flex-direction: column;
