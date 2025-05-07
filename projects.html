@@ -1,228 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects - Shruti Pol</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-      background-color: #333;
-      padding: 1rem;
-      color: white;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-      gap: 1rem;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .theme-btn {
-      background-color: #555;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .certifications-section {
-      padding: 2rem;
-      background-color: #f9f9f9;
-    }
-
-    .certifications-section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .certification-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
-    .cert-card {
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .cert-card:hover {
-      transform: scale(1.02);
-    }
-
-    .cert-card p {
-      margin: 0.5rem 0;
-      font-weight: 500;
-    }
-
-    .cert-card a {
-      display: inline-block;
-      margin-top: 0.3rem;
-      color: #007BFF;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .cert-card a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    .dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-
-    .dark-mode header, .dark-mode footer {
-      background-color: #1e1e1e;
-    }
-
-    .dark-mode .certifications-section {
-      background-color: #1a1a1a;
-    }
-
-    .dark-mode .cert-card {
-      background-color: #2a2a2a;
-      border-color: #444;
-    }
-
-    .dark-mode .cert-card a {
-      color: #66b2ff;
-    }
-
-    .dark-mode .theme-btn {
-      background-color: #444;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Shruti Pol</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Shruti Pol</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="certificate.html">Certification</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
-    </nav>
-  </header>
+  <header>
+    <nav>
+      <div class="logo">Shruti Pol</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certificate.html">Certification</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
+    </nav>
+  </header>
 
-  <section id="certifications" class="certifications-section">
-    <h2>Certifications</h2>
-    <div class="certification-grid">
-      <div class="cert-card">
-        <p>AWS Academy Graduate - Cloud Foundation</p>
-        <a href="https://drive.google.com/file/d/1d2kUVlh-MDW21kqKfKtaUM7V_MtSGqze/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>AWS Academy Graduate - Cloud Architecting</p>
-        <a href="https://drive.google.com/file/d/1dD8UTgAg2EdpG30gYFmNOquS9aGKPvBF/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>Node.js Certification</p>
-        <a href="https://drive.google.com/file/d/1dDmoUQrhQCIoAZm_K1vfL-4-fNEfbFgT/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>React.js Certification</p>
-        <a href="https://drive.google.com/file/d/1dDf3Rh99dFqJSMsg1gnsAkl65d6harkG/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>WordPress Certification</p>
-        <a href="https://drive.google.com/file/d/1dGBrq0obFvhYrMM4gOFBu4zZNqbnczo6/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>DSA in C++ Certification</p>
-        <a href="https://drive.google.com/file/d/1da8RYlobOeThKo4Pj7fn6bv564huTGfZ/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>JavaScript Certification</p>
-        <a href="https://drive.google.com/file/d/1dcmlCMG689jRFLVjRThDIZ_uc578TbLv/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>PHP for Beginners</p>
-        <a href="https://drive.google.com/file/d/1dPxS0VngqBMfSflf6XpVBZ_TeSxiFgHZ/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>HTML Certificate</p>
-        <a href="https://drive.google.com/file/d/1dfDi9FXjqClv8cEhPfc9kAgmhMIK5Ww0/view?usp=drivesdk" target="_blank">View</a>
-        <p>CSS Certificate</p>
-        <a href="https://drive.google.com/file/d/1dNqWNJaUE-CXQHEA4wYZ2PsUziLuwaka/view?usp=drivesdk" target="_blank">View</a>
-      </div>
-      <div class="cert-card">
-        <p>Python Certification</p>
-        <a href="https://drive.google.com/file/d/1-NIVZsobbIpj1RSwc17ignn1ZwpDOePp/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>C++ Certification</p>
-        <a href="https://drive.google.com/file/d/1-LiNFdS4IZdO52vPRNGs9JxgqKDCEDuP/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-      <div class="cert-card">
-        <p>C and Python Certifications</p>
-        <a href="https://drive.google.com/file/d/1dfKF__HiaBCa_XLnQzjfu05OPHfeSBMJ/view?usp=drivesdk" target="_blank">View Certificate</a>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section id="projects" class="projects">
+      <h2>Projects & Certifications</h2>
+      <ul>
+        <li>
+          <strong>AWS Academy Graduate - Cloud Foundation</strong> 
+          <a href="https://drive.google.com/file/d/1d2kUVlh-MDW21kqKfKtaUM7V_MtSGqze/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li>
+          <strong>AWS Academy Graduate - Cloud Architecting</strong> 
+          <a href="https://drive.google.com/file/d/1dD8UTgAg2EdpG30gYFmNOquS9aGKPvBF/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>Node.js Certification</strong> 
+          <a href="https://drive.google.com/file/d/1dDmoUQrhQCIoAZm_K1vfL-4-fNEfbFgT/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>React.js Certification</strong> 
+          <a href="https://drive.google.com/file/d/1dDf3Rh99dFqJSMsg1gnsAkl65d6harkG/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>WordPress Certification</strong> 
+          <a href="https://drive.google.com/file/d/1dGBrq0obFvhYrMM4gOFBu4zZNqbnczo6/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>DSA in C++</strong> 
+          <a href="https://drive.google.com/file/d/1da8RYlobOeThKo4Pj7fn6bv564huTGfZ/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>JavaScript Certification</strong> 
+          <a href="https://drive.google.com/file/d/1dcmlCMG689jRFLVjRThDIZ_uc578TbLv/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>PHP for Beginners</strong> 
+          <a href="https://drive.google.com/file/d/1dPxS0VngqBMfSflf6XpVBZ_TeSxiFgHZ/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li>
+          <strong>HTML and CSS Certifications</strong><br>
+          <a href="https://drive.google.com/file/d/1dfDi9FXjqClv8cEhPfc9kAgmhMIK5Ww0/view?usp=drivesdk" target="_blank">[HTML]</a> | 
+          <a href="https://drive.google.com/file/d/1dNqWNJaUE-CXQHEA4wYZ2PsUziLuwaka/view?usp=drivesdk" target="_blank">[CSS]</a>
+        </li>
+        <li><strong>Python Certification</strong> 
+          <a href="https://drive.google.com/file/d/1-NIVZsobbIpj1RSwc17ignn1ZwpDOePp/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>C++ Certification</strong> 
+          <a href="https://drive.google.com/file/d/1-LiNFdS4IZdO52vPRNGs9JxgqKDCEDuP/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+        <li><strong>C and Python Certifications</strong> 
+          <a href="https://drive.google.com/file/d/1dfKF__HiaBCa_XLnQzjfu05OPHfeSBMJ/view?usp=drivesdk" target="_blank">[View Certificate]</a>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
-  </footer>
+  <footer>
+    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
+  </footer>
 
-  <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+  <!-- Theme Toggle Script -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-    }
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+    }
 
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-  </script>
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
