@@ -135,9 +135,11 @@ section {
   margin: 1rem auto;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
+  width: 90%; /* Make the width more fluid and responsive */
+  max-width: 1000px; /* Limit max width on large screens */
   text-align: justify;
   font-size: var(--font-size-small); /* Apply small font size to all text inside sections */
+  box-sizing: border-box;
 }
 
 /* Profile Image (if used) */
@@ -235,7 +237,8 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   section {
-    padding: 1rem;
+    padding: 1.5rem;
+    width: 95%; /* Increase section width on smaller screens */
   }
 
   header {
@@ -253,6 +256,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+  section {
+    padding: 1rem;
+    width: 100%; /* Full width on very small screens */
+  }
+
   .hero h1 {
     font-size: var(--font-size-small);
   }
