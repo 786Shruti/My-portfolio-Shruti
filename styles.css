@@ -223,6 +223,7 @@ footer {
 .certifications ul {
     list-style: none;
     padding: 0;
+    text-align: left
 }
 
 .certifications li {
