@@ -1,10 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects - Shruti Pol</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: #333;
+      padding: 1rem;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .theme-btn {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .certifications-section {
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    .certifications-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .certification-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .cert-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .cert-card:hover {
+      transform: scale(1.02);
+    }
+
+    .cert-card p {
+      margin: 0.5rem 0;
+      font-weight: 500;
+    }
+
+    .cert-card a {
+      display: inline-block;
+      margin-top: 0.3rem;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cert-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode header, .dark-mode footer {
+      background-color: #1e1e1e;
+    }
+
+    .dark-mode .certifications-section {
+      background-color: #1a1a1a;
+    }
+
+    .dark-mode .cert-card {
+      background-color: #2a2a2a;
+      border-color: #444;
+    }
+
+    .dark-mode .cert-card a {
+      color: #66b2ff;
+    }
+
+    .dark-mode .theme-btn {
+      background-color: #444;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,86 +147,62 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <!-- Theme Toggle Button -->
       <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
     </nav>
   </header>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-item">
-        <h3>Image Gallery</h3>
-        <p>An advanced image gallery with Responsive Layout, Dynamic Image Addition, Image Modal, Data Persistence.</p>
-        <a href="https://github.com/786Shruti/Image-gallery" target="_blank">View on GitHub</a><br>
-	<a href="http://imagegallery.infinityfreeapp.com/" target="_blank">Live Demo</a>
+  <section id="certifications" class="certifications-section">
+    <h2>Certifications</h2>
+    <div class="certification-grid">
+      <div class="cert-card">
+        <p>AWS Academy Graduate - Cloud Foundation</p>
+        <a href="https://drive.google.com/file/d/1d2kUVlh-MDW21kqKfKtaUM7V_MtSGqze/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-      <div class="project-item"> 
-    <h3>Quiz App with Gamification</h3>
-
-    <p>A web-based quiz application with interactive gamification features, answer review, and score tracking.</p>
-
-    <a href="https://github.com/786Shruti/Quiz-app" target="_blank">View on GitHub</a><br>
-
-    <a href="https://quizappshruti.netlify.app/" target="_blank">Live Demo on Netlify</a>
-</div>
-<div class="project-item">
-        <h3>Freelance Marketplace</h3>
-        <p>A platform connecting clients posting jobs with freelancers applying for them. Use of MySQL, PHP.</p>
-        <a href="https://github.com/786Shruti/Freelancer_Marketplace" target="_blank">View on GitHub</a><br>
-	<a href="https://www.linkedin.com/posts/786shruti-pol_php-mysql-webdevelopment-activity-7301920188147404801-i5a7?utm_source=share&utm_medium=member_android&rcm=ACoAAEpSX2IBf1-wBx0PX_cz8pRMWzwaQXifhAY" target="_blank">Video Demo</a>
+      <div class="cert-card">
+        <p>AWS Academy Graduate - Cloud Architecting</p>
+        <a href="https://drive.google.com/file/d/1dD8UTgAg2EdpG30gYFmNOquS9aGKPvBF/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-      <div class="project-item">
-        <h3>CSChatBot</h3>
-        <p> A simple web and cloud FAQ chatbot built with Dialogflow, HTML, CSS, and JavaScript, providing answers to frequently asked questions for computer engineering students and tech enthusiasts.</p>
-        <a href="https://github.com/786Shruti/Simple-chatbot-" target="_blank">View on GitHub</a><br>
-        <a href="https://786shruti.github.io/Simple-chatbot-/" target="_blank">Live Demo</a>
+      <div class="cert-card">
+        <p>Node.js Certification</p>
+        <a href="https://drive.google.com/file/d/1dDmoUQrhQCIoAZm_K1vfL-4-fNEfbFgT/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-      <div class="project-item">
-        <h3>Youtube Summarizer</h3>
-        <p> A simple app which provides you basic summary of any youtube video.</p>
-        <a href="https://github.com/786Shruti/Youtube-summarizer/" target="_blank">View on GitHub</a><br>
-	<a href="https://silly-kheer-9b4b78.netlify.app/" target="_blank">Live Demo</a>
+      <div class="cert-card">
+        <p>React.js Certification</p>
+        <a href="https://drive.google.com/file/d/1dDf3Rh99dFqJSMsg1gnsAkl65d6harkG/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-   <div class="project-item">
-        <h3>Expense Tracker</h3>
-        <p>A deep-level project to track expenses built using PHP and MySQL.</p>
-        <a href="https://github.com/786Shruti/Expense-Tacker-miniproject" target="_blank">View on GitHub</a><br>
-	<a href="http://expensetrackershruti.great-site.net/" target="_blank">Live Demo</a>
+      <div class="cert-card">
+        <p>WordPress Certification</p>
+        <a href="https://drive.google.com/file/d/1dGBrq0obFvhYrMM4gOFBu4zZNqbnczo6/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-      <div class="project-item">
-        <h3>Personal portfolio</h3>
-        <p>A advanced portffolio to showcase my achievements and much more.</p>
-	<a href="https://github.com/786Shruti/My-portfolio-Shruti" target="_blank">View on GitHub</a><br>
-        <a href="https://786shruti.github.io/My-portfolio-Shruti/" target="_blank">Live Demo on GitHub</a>
+      <div class="cert-card">
+        <p>DSA in C++ Certification</p>
+        <a href="https://drive.google.com/file/d/1da8RYlobOeThKo4Pj7fn6bv564huTGfZ/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-<div class="project-item">
-        <h3>Note Making Application</h3>
-        <p>A simple and effective note-taking app with search and save options.</p>
-	<a href="https://github.com/786Shruti/Note-making" target="_blank">View on GitHub</a><br>
-        <a href="https://786shruti.github.io/Note-making/" target="_blank">Live Demo on GitHub</a>
+      <div class="cert-card">
+        <p>JavaScript Certification</p>
+        <a href="https://drive.google.com/file/d/1dcmlCMG689jRFLVjRThDIZ_uc578TbLv/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-    <div class="project-item">
-        <h3>Greet message</h3>
-        <p>My first small project i.e display greet message on webpage using AWS Cloud platform.</p>
-        <a href="http://myfirstbucketshruti.s3-website.ap-south-1.amazonaws.com/" target="_blank">Live Demo on AWS Cloud platform.</a>
+      <div class="cert-card">
+        <p>PHP for Beginners</p>
+        <a href="https://drive.google.com/file/d/1dPxS0VngqBMfSflf6XpVBZ_TeSxiFgHZ/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-      <div class="project-item">
-        <h3>SPPU DSA study material</h3>
-        <p>An advanced website that provides dsa study material also generate question paper on basis of user requirement.</p>
-        <a href="https://github.com/786Shruti/SPPU-DSA-study-material-website" target="_blank">View on GitHub</a>
+      <div class="cert-card">
+        <p>HTML Certificate</p>
+        <a href="https://drive.google.com/file/d/1dfDi9FXjqClv8cEhPfc9kAgmhMIK5Ww0/view?usp=drivesdk" target="_blank">View</a>
+        <p>CSS Certificate</p>
+        <a href="https://drive.google.com/file/d/1dNqWNJaUE-CXQHEA4wYZ2PsUziLuwaka/view?usp=drivesdk" target="_blank">View</a>
       </div>
-      <div class="project-item">
-        <h3>To-Do List Application</h3>
-        <p>A dynamic to-do list application integrated with AWS Lambda and DynamoDB for serverless backend support.</p>
-        <a href="http://your-todo-app-frontend.s3-website.ap-south-1.amazonaws.com/" target="_blank">Live Demo on AWS Cloud platform.</a>
+      <div class="cert-card">
+        <p>Python Certification</p>
+        <a href="https://drive.google.com/file/d/1-NIVZsobbIpj1RSwc17ignn1ZwpDOePp/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
-      <div class="project-item">
-        <h3>Product Listing Webpage</h3>
-        <p> Product page where users can filter items by categories or price, and sort them based on criteria like rating.</p>
-        <a href="https://github.com/786Shruti/Product-listing-page" target="_blank">View on GitHub</a><br>
-	<a href="https://786shruti.github.io/Product-listing-page/" target="_blank">Live Demo on GitHub</a>
+      <div class="cert-card">
+        <p>C++ Certification</p>
+        <a href="https://drive.google.com/file/d/1-LiNFdS4IZdO52vPRNGs9JxgqKDCEDuP/view?usp=drivesdk" target="_blank">View Certificate</a>
+      </div>
+      <div class="cert-card">
+        <p>C and Python Certifications</p>
+        <a href="https://drive.google.com/file/d/1dfKF__HiaBCa_XLnQzjfu05OPHfeSBMJ/view?usp=drivesdk" target="_blank">View Certificate</a>
       </div>
     </div>
   </section>
@@ -107,19 +212,17 @@
   </footer>
 
   <script>
-  const themeToggle = document.getElementById('theme-toggle');
-  const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-  // Check saved theme in localStorage
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-  }
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+    }
 
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-</script>
-
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
