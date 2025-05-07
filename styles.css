@@ -1,5 +1,5 @@
 :root {
-  --font-size-small: 0.75rem; /* Use same small font size throughout */
+  --font-size-small: 0.75rem; /* Small font size for all text */
   --font-size-base: 0.75rem; /* Base font size same as small */
   --font-size-regular: 0.75rem;
   --font-size-large: 0.75rem;
@@ -137,6 +137,7 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 1000px;
   text-align: justify;
+  font-size: var(--font-size-small); /* Apply small font size to all text inside sections */
 }
 
 /* Profile Image (if used) */
