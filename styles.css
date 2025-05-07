@@ -1,22 +1,28 @@
 :root {
-  --font-size-base: 10px;
-  --font-size-small: 0.625rem;
-  --font-size-regular: 0.625rem;
-  --font-size-large: 0.625rem;
+  --font-size-base: 16px;
+  --font-size-small: 0.75rem;
+  --font-size-regular: 1rem;
+  --font-size-large: 1.25rem;
   --bg-color: #ffffff;
   --text-color: #000000;
   --link-color: #007acc;
   --accent-bg: #f8f9fa;
   --accent-border: #ddd;
+  --primary-color: #007acc;
+  --secondary-color: #005f99;
+  --dark-bg: #121212;
+  --dark-text: #ffffff;
+  --dark-accent-bg: #1e1e1e;
+  --dark-accent-border: #333;
 }
 
 /* Dark mode overrides */
 body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #ffffff;
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
   --link-color: #1e90ff;
-  --accent-bg: #1e1e1e;
-  --accent-border: #333;
+  --accent-bg: var(--dark-accent-bg);
+  --accent-border: var(--dark-accent-border);
 }
 
 html, body {
@@ -30,7 +36,6 @@ html, body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Layout: make sure footer sticks to bottom */
 body {
   display: flex;
   flex-direction: column;
@@ -80,10 +85,12 @@ header ul li a {
   color: var(--bg-color);
   font-size: var(--font-size-small);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 header ul li a:hover {
   text-decoration: underline;
+  color: var(--secondary-color);
 }
 
 /* Toggle Button */
@@ -106,7 +113,7 @@ header ul li a:hover {
 }
 
 .hero h1 {
-  font-size: var(--font-size-regular);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: bold;
 }
 
@@ -160,8 +167,13 @@ section {
   background: var(--accent-bg);
   border: 1px solid var(--accent-border);
   padding: 1.5rem;
-  border-radius: 5px;
-  transition: 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-item h3 {
@@ -188,7 +200,7 @@ section {
 .certifications li {
   background: var(--accent-bg);
   border: 1px solid var(--accent-border);
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 10px 0;
   padding: 10px;
 }
@@ -212,10 +224,11 @@ footer {
   font-weight: bold;
   border-radius: 5px;
   font-size: var(--font-size-small);
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #005f99;
+  background-color: var(--secondary-color);
 }
 
 /* Responsive Design */
@@ -229,7 +242,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: var(--font-size-regular);
+    font-size: 1.5rem;
   }
 
   .projects .project-list {
@@ -240,7 +253,7 @@ footer {
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: var(--font-size-small);
+    font-size: 1.25rem;
   }
 
   .projects .project-list {
