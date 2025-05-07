@@ -1,5 +1,5 @@
 :root {
-  --font-size-base: 16px;
+  --font-size-base: 10px;
   --bg-color: #ffffff;
   --text-color: #000000;
   --link-color: #007acc;
@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
