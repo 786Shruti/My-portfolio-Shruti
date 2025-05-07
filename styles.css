@@ -1,8 +1,8 @@
 :root {
-  --font-size-base: 16px;
-  --font-size-small: 0.75rem;
-  --font-size-regular: 1rem;
-  --font-size-large: 1.25rem;
+  --font-size-small: 0.75rem; /* Use same small font size throughout */
+  --font-size-base: 0.75rem; /* Base font size same as small */
+  --font-size-regular: 0.75rem;
+  --font-size-large: 0.75rem;
   --bg-color: #ffffff;
   --text-color: #000000;
   --link-color: #007acc;
@@ -83,7 +83,7 @@ header ul {
 
 header ul li a {
   color: var(--bg-color);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-small); /* Small font size for links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -113,7 +113,7 @@ header ul li a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: var(--font-size-small);
   font-weight: bold;
 }
 
@@ -189,7 +189,7 @@ section {
 
 .certifications h2 {
   text-align: center;
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-small);
 }
 
 .certifications ul {
@@ -242,7 +242,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-small);
   }
 
   .projects .project-list {
@@ -253,7 +253,7 @@ footer {
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-small);
   }
 
   .projects .project-list {
