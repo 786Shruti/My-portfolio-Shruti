@@ -116,14 +116,14 @@ section {
 }
 
 /* Footer */
-
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   text-align: center;
   background: var(--link-color);
   color: var(--bg-color);
   padding: 1rem 0;
-  margin-top: auto;
-  flex-shrink: 0; /* Ensure footer doesn't shrink */
 }
 
 /* Profile Section */
