@@ -1,8 +1,8 @@
 :root {
-  --font-size-base: 1px;
-  --font-size-small: 1.2rem;
-  --font-size-regular: 1.4rem;
-  --font-size-large: 1.6rem;
+  --font-size-base: 10px;
+  --font-size-small: 10px;
+  --font-size-regular: 10px;
+  --font-size-large: 10px;
   --bg-color: #ffffff;
   --text-color: #000000;
   --link-color: #007acc;
@@ -146,6 +146,7 @@ section {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--link-color);
+  align-items: center;
 }
 
 /* Projects */
