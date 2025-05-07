@@ -1,92 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Shruti Pol</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Shruti Pol</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Shruti Pol</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="certificate.html">Certification</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
-    </nav>
-  </header>
+  <header>
+    <nav>
+      <div class="logo">Shruti Pol</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certificate.html">Certification</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
+    </nav>
+  </header>
 
-  <main>
-    <section id="projects" class="projects">
-      <h2>Projects & Certifications</h2>
-      <ul>
-        <li>
-          <strong>AWS Academy Graduate - Cloud Foundation</strong> 
-          <a href="https://drive.google.com/file/d/1d2kUVlh-MDW21kqKfKtaUM7V_MtSGqze/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li>
-          <strong>AWS Academy Graduate - Cloud Architecting</strong> 
-          <a href="https://drive.google.com/file/d/1dD8UTgAg2EdpG30gYFmNOquS9aGKPvBF/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>Node.js Certification</strong> 
-          <a href="https://drive.google.com/file/d/1dDmoUQrhQCIoAZm_K1vfL-4-fNEfbFgT/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>React.js Certification</strong> 
-          <a href="https://drive.google.com/file/d/1dDf3Rh99dFqJSMsg1gnsAkl65d6harkG/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>WordPress Certification</strong> 
-          <a href="https://drive.google.com/file/d/1dGBrq0obFvhYrMM4gOFBu4zZNqbnczo6/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>DSA in C++</strong> 
-          <a href="https://drive.google.com/file/d/1da8RYlobOeThKo4Pj7fn6bv564huTGfZ/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>JavaScript Certification</strong> 
-          <a href="https://drive.google.com/file/d/1dcmlCMG689jRFLVjRThDIZ_uc578TbLv/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>PHP for Beginners</strong> 
-          <a href="https://drive.google.com/file/d/1dPxS0VngqBMfSflf6XpVBZ_TeSxiFgHZ/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li>
-          <strong>HTML and CSS Certifications</strong><br>
-          <a href="https://drive.google.com/file/d/1dfDi9FXjqClv8cEhPfc9kAgmhMIK5Ww0/view?usp=drivesdk" target="_blank">[HTML]</a> | 
-          <a href="https://drive.google.com/file/d/1dNqWNJaUE-CXQHEA4wYZ2PsUziLuwaka/view?usp=drivesdk" target="_blank">[CSS]</a>
-        </li>
-        <li><strong>Python Certification</strong> 
-          <a href="https://drive.google.com/file/d/1-NIVZsobbIpj1RSwc17ignn1ZwpDOePp/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>C++ Certification</strong> 
-          <a href="https://drive.google.com/file/d/1-LiNFdS4IZdO52vPRNGs9JxgqKDCEDuP/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-        <li><strong>C and Python Certifications</strong> 
-          <a href="https://drive.google.com/file/d/1dfKF__HiaBCa_XLnQzjfu05OPHfeSBMJ/view?usp=drivesdk" target="_blank">[View Certificate]</a>
-        </li>
-      </ul>
-    </section>
-  </main>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Image Gallery</h3>
+        <p>An advanced image gallery with Responsive Layout, Dynamic Image Addition, Image Modal, Data Persistence.</p>
+        <a href="https://github.com/786Shruti/Image-gallery" target="_blank">View on GitHub</a><br>
+	<a href="http://imagegallery.infinityfreeapp.com/" target="_blank">Live Demo</a>
+      </div>
+      <div class="project-item"> 
+    <h3>Quiz App with Gamification</h3>
 
-  <footer>
-    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
-  </footer>
+    <p>A web-based quiz application with interactive gamification features, answer review, and score tracking.</p>
 
-  <!-- Theme Toggle Script -->
-  <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    <a href="https://github.com/786Shruti/Quiz-app" target="_blank">View on GitHub</a><br>
 
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-    }
+    <a href="https://quizappshruti.netlify.app/" target="_blank">Live Demo on Netlify</a>
+</div>
+<div class="project-item">
+        <h3>Freelance Marketplace</h3>
+        <p>A platform connecting clients posting jobs with freelancers applying for them. Use of MySQL, PHP.</p>
+        <a href="https://github.com/786Shruti/Freelancer_Marketplace" target="_blank">View on GitHub</a><br>
+	<a href="https://www.linkedin.com/posts/786shruti-pol_php-mysql-webdevelopment-activity-7301920188147404801-i5a7?utm_source=share&utm_medium=member_android&rcm=ACoAAEpSX2IBf1-wBx0PX_cz8pRMWzwaQXifhAY" target="_blank">Video Demo</a>
+      </div>
+      <div class="project-item">
+        <h3>CSChatBot</h3>
+        <p> A simple web and cloud FAQ chatbot built with Dialogflow, HTML, CSS, and JavaScript, providing answers to frequently asked questions for computer engineering students and tech enthusiasts.</p>
+        <a href="https://github.com/786Shruti/Simple-chatbot/" target="_blank">View on GitHub</a><br>
+        <a href="https://786shruti.github.io/Simple-chatbot-/" target="_blank">Live Demo</a>
+      </div>
+      <div class="project-item">
+        <h3>Youtube Summarizer</h3>
+        <p> A simple app which provides you basic summary of any youtube video.</p>
+        <a href="https://github.com/786Shruti/Youtube-summarizer/" target="_blank">View on GitHub</a><br>
+	<a href="https://silly-kheer-9b4b78.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+   <div class="project-item">
+        <h3>Expense Tracker</h3>
+        <p>A deep-level project to track expenses built using PHP and MySQL.</p>
+        <a href="https://github.com/786Shruti/Expense-Tacker-miniproject" target="_blank">View on GitHub</a><br>
+	<a href="http://expensetrackershruti.great-site.net/" target="_blank">Live Demo</a>
+      </div>
+      <div class="project-item">
+        <h3>Personal portfolio</h3>
+        <p>A advanced portffolio to showcase my achievements and much more.</p>
+	<a href="https://github.com/786Shruti/My-portfolio-Shruti" target="_blank">View on GitHub</a><br>
+        <a href="https://786shruti.github.io/My-portfolio-Shruti/" target="_blank">Live Demo on GitHub</a>
+      </div>
+<div class="project-item">
+        <h3>Note Making Application</h3>
+        <p>A simple and effective note-taking app with search and save options.</p>
+	<a href="https://github.com/786Shruti/Note-making" target="_blank">View on GitHub</a><br>
+        <a href="https://786shruti.github.io/Note-making/" target="_blank">Live Demo on GitHub</a>
+      </div>
+    <div class="project-item">
+        <h3>Greet message</h3>
+        <p>My first small project i.e display greet message on webpage using AWS Cloud platform.</p>
+        <a href="http://myfirstbucketshruti.s3-website.ap-south-1.amazonaws.com/" target="_blank">Live Demo on AWS Cloud platform.</a>
+      </div>
+      <div class="project-item">
+        <h3>SPPU DSA study material</h3>
+        <p>An advanced website that provides dsa study material also generate question paper on basis of user requirement.</p>
+        <a href="https://github.com/786Shruti/SPPU-DSA-study-material-website" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-item">
+        <h3>To-Do List Application</h3>
+        <p>A dynamic to-do list application integrated with AWS Lambda and DynamoDB for serverless backend support.</p>
+        <a href="http://your-todo-app-frontend.s3-website.ap-south-1.amazonaws.com/" target="_blank">Live Demo on AWS Cloud platform.</a>
+      </div>
+      <div class="project-item">
+        <h3>Product Listing Webpage</h3>
+        <p> Product page where users can filter items by categories or price, and sort them based on criteria like rating.</p>
+        <a href="https://github.com/786Shruti/Product-listing-page" target="_blank">View on GitHub</a><br>
+	<a href="https://786shruti.github.io/Product-listing-page/" target="_blank">Live Demo on GitHub</a>
+      </div>
+    </div>
+  </section>
 
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-  </script>
+  <footer>
+    <p>&copy; 2024 Shruti Pol. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check saved theme in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+</script>
+
 </body>
 </html>
