@@ -14,10 +14,6 @@ html, body {
   transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
-main {
-  flex: 1;
-}
-
 body {
   display: flex;
   flex-direction: column;
