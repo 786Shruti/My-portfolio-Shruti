@@ -1,52 +1,44 @@
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --link-color: #007acc;
-  --font: Arial, sans-serif;
-  --font-size: 16px;
-  --border-radius: 6px;
-  --border-color: #ddd;
-  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  --transition-speed: 0.3s;
+  /* Default (Light Mode) Variables */
+  --bg-color: #ffffff; /* Light background color */
+  --text-color: #000000; /* Light text color */
+  --link-color: #007acc; /* Light link/button color */
 }
 
-/* Global settings */
-* {
-  font-family: var(--font);
-  font-size: var(--font-size);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+body {
   display: flex;
   flex-direction: column;
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  min-height: 100vh;
+  margin: 0;
 }
 
-main {
-  flex: 1;
+footer {
+  margin-top: auto;
 }
 
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #ffffff;
-  --link-color: #1e90ff;
+body {
+  background-color: var(--bg-color); /* Background adapts to theme */
+  color: var(--text-color); /* Text adapts to theme */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-/* Links */
 a {
-  color: var(--link-color);
+  color: var(--link-color); /* Links adapt to theme */
   text-decoration: none;
-  transition: color var(--transition-speed) ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Optional hover effect */
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+  --bg-color: #121212; /* Dark background color */
+  --text-color: #ffffff; /* Dark text color */
+  --link-color: #1e90ff; /* Dark link/button color */
 }
 
 /* Theme Toggle Button */
@@ -56,14 +48,14 @@ a:hover {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: var(--border-radius);
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
 header {
-  background: var(--link-color);
-  color: var(--bg-color);
+  background: var(--link-color); /* Adapt to theme */
+  color: var(--bg-color); /* Text color adapts to theme */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -74,8 +66,8 @@ header {
 }
 
 header .logo {
-  font-weight: 600;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 header ul {
@@ -85,7 +77,8 @@ header ul {
 }
 
 header ul li a {
-  color: var(--bg-color);
+  text-decoration: none;
+  color: var(--bg-color); /* Adapt to theme */
   font-weight: 400;
 }
 
@@ -93,12 +86,12 @@ header ul li a {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: var(--bg-color);
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  background: var(--bg-color); /* Adapt to theme */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero span {
-  color: var(--link-color);
+  color: var(--link-color); /* Accent color */
 }
 
 /* General Section Styling */
@@ -108,10 +101,9 @@ section {
   color: var(--text-color);
   padding: 2rem;
   margin: 1rem 0;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  border: 1px solid var(--border-color);
-  transition: all var(--transition-speed) ease;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Projects Section */
@@ -125,10 +117,9 @@ section {
   background: var(--bg-color);
   color: var(--text-color);
   padding: 1.5rem;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--box-shadow);
-  transition: all var(--transition-speed) ease;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-item h3 {
@@ -138,11 +129,10 @@ section {
 /* Footer */
 footer {
   text-align: center;
-  background: var(--link-color);
+  background: var(--link-color); /* Adapt to theme */
   color: var(--bg-color);
   padding: 1rem 0;
-  margin-top: auto;
-  border-top: 1px solid var(--border-color);
+  margin-top: 2rem;
 }
 
 /* Profile Section */
@@ -150,7 +140,6 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
-  justify-content: center;
 }
 
 .profile-photo {
@@ -159,101 +148,106 @@ footer {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--link-color);
-  transition: border-color var(--transition-speed) ease;
+  transition: border-color 0.3s ease;
 }
 
-/* Buttons */
+/* Button Styling */
 .btn {
   background-color: var(--link-color);
   color: var(--bg-color);
   text-decoration: none;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   padding: 0.7rem 1.5rem;
   font-weight: bold;
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #005f99;
 }
 
-/* Certifications Section */
+/* For devices with a max-width of 768px (tablets, small screens) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly smaller text for smaller screens */
+    }
+    section {
+        padding: 1rem; /* Adjust section padding */
+    }
+    h1 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+    header {
+        padding: 0.5rem 1rem; /* Adjust header padding */
+        font-size: 0.9rem; /* Adjust text size in header */
+    }
+    footer {
+        padding: 0.5rem; /* Adjust footer padding */
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+    .projects .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust project layout */
+        gap: 1rem;
+    }
+}
+
+/* For devices with a max-width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Further reduce font size for smaller devices */
+    }
+    header {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: center; /* Center align */
+        padding: 0.5rem;
+    }
+    footer {
+        text-align: center; /* Ensure footer text is centered */
+        padding: 0.5rem;
+        font-size: 0.7rem; /* Adjust footer text size */
+    }
+    section {
+        padding: 0.8rem; /* Reduce padding for sections */
+    }
+    h1 {
+        font-size: 1.5em; /* Smaller headings for mobile */
+    }
+    .projects .project-list {
+        grid-template-columns: 1fr; /* Single column layout for projects */
+        gap: 0.8rem; /* Adjust spacing between projects */
+    }
+    .projects .project-item {
+        padding: 1rem; /* Reduce padding for project items */
+    }
+}
 .certifications {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  text-align: left;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
 .certifications h2 {
-  text-align: center;
-  color: var(--text-color);
+    text-align: center;
+    color: #333;
 }
 
 .certifications ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .certifications li {
-  background: var(--bg-color);
-  color: var(--text-color);
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--box-shadow);
-  transition: all var(--transition-speed) ease;
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .certifications a {
-  color: var(--link-color);
-  text-decoration: none;
+    color: #007bff;
+    text-decoration: none;
 }
 
 .certifications a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive: Tablets */
-@media (max-width: 768px) {
-  section {
-    padding: 1rem;
-  }
-
-  header {
-    padding: 0.5rem 1rem;
-  }
-
-  .projects .project-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-}
-
-/* Responsive: Mobile Phones */
-@media (max-width: 480px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-  }
-
-  footer {
-    padding: 0.5rem;
-  }
-
-  section {
-    padding: 0.8rem;
-  }
-
-  .projects .project-list {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-
-  .projects .project-item {
-    padding: 1rem;
-  }
+    text-decoration: underline;
 }
