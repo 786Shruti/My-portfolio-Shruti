@@ -1,53 +1,50 @@
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --link-color: #007acc;
-  --accent-bg: #f8f9fa;
-  --accent-border: #ddd;
-  --primary-color: #007acc;
-  --secondary-color: #005f99;
-  --dark-bg: #121212;
-  --dark-text: #ffffff;
-  --dark-link: #1e90ff;
+  /* Default (Light Mode) Variables */
+  --bg-color: #ffffff; /* Light background color */
+  --text-color: #000000; /* Light text color */
+  --link-color: #007acc; /* Light link/button color */
 }
 
-/* Dark Mode Overrides */
-body.dark-mode {
-  --bg-color: var(--dark-bg);
-  --text-color: var(--dark-text);
-  --link-color: var(--dark-link);
-}
-
-/* Base Layout Fix for Sticky Footer */
-html, body {
-  height: 100%;
+body {
+  background-color: var(--bg-color); /* Background adapts to theme */
+  color: var(--text-color); /* Text adapts to theme */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-main {
-  flex: 1;
-}
-
-/* Links */
 a {
-  color: var(--link-color);
+  color: var(--link-color); /* Links adapt to theme */
   text-decoration: none;
 }
+
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Optional hover effect */
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+  --bg-color: #121212; /* Dark background color */
+  --text-color: #ffffff; /* Dark text color */
+  --link-color: #1e90ff; /* Dark link/button color */
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  background: var(--link-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
 header {
-  background: var(--link-color);
-  color: var(--bg-color);
+  background: var(--link-color); /* Adapt to theme */
+  color: var(--bg-color); /* Text color adapts to theme */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -56,187 +53,190 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 header .logo {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 header ul {
   list-style: none;
   display: flex;
   gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-header ul li a {
-  color: var(--bg-color);
-  font-weight: 500;
 }
 
-/* Theme Toggle Button */
-.theme-btn {
-  background: var(--bg-color);
-  color: var(--link-color);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+header ul li a {
+  text-decoration: none;
+  color: var(--bg-color); /* Adapt to theme */
+  font-weight: 400;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: var(--bg-color);
-}
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-.hero span {
-  color: var(--link-color);
-}
-.hero p {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.6;
+  background: var(--bg-color); /* Adapt to theme */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Sections */
+.hero span {
+  color: var(--link-color); /* Accent color */
+}
+
+/* General Section Styling */
 section {
+  text-align: center;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
-  margin: 1rem auto;
+  margin: 1rem 0;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 1000px;
-  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Projects Section */
+.projects .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-item {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-item h3 {
+  color: var(--link-color);
+}
+
+/* Footer */
+footer {
   text-align: center;
+  background: var(--link-color); /* Adapt to theme */
+  color: var(--bg-color);
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
 /* Profile Section */
 .profile {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
+
 .profile-photo {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--link-color);
+  transition: border-color 0.3s ease;
 }
 
-/* Projects */
-.projects .project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-.project-item {
-  background: var(--accent-bg);
-  border: 1px solid var(--accent-border);
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.project-item h3 {
-  color: var(--link-color);
-}
-
-/* Certifications */
-.certifications {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-.certifications h2 {
-  text-align: center;
-  color: var(--text-color);
-}
-.certifications ul {
-  list-style: none;
-  padding: 0;
-}
-.certifications li {
-  background: var(--accent-bg);
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
-.certifications a {
-  color: var(--link-color);
-}
-.certifications a:hover {
-  text-decoration: underline;
-}
-
-/* Buttons */
+/* Button Styling */
 .btn {
   background-color: var(--link-color);
   color: var(--bg-color);
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  font-weight: bold;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .btn:hover {
-  background-color: var(--secondary-color);
+  background-color: #005f99;
 }
 
-/* Footer */
-footer {
-  background: var(--link-color);
-  color: var(--bg-color);
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.875rem;
-}
-
-/* Responsive Design */
+/* For devices with a max-width of 768px (tablets, small screens) */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-  header {
-    padding: 0.5rem 1rem;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .projects .project-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  footer {
-    font-size: 0.8rem;
-  }
+    body {
+        font-size: 14px; /* Slightly smaller text for smaller screens */
+    }
+    section {
+        padding: 1rem; /* Adjust section padding */
+    }
+    h1 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+    header {
+        padding: 0.5rem 1rem; /* Adjust header padding */
+        font-size: 0.9rem; /* Adjust text size in header */
+    }
+    footer {
+        padding: 0.5rem; /* Adjust footer padding */
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+    .projects .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust project layout */
+        gap: 1rem;
+    }
 }
 
+/* For devices with a max-width of 480px (mobile phones) */
 @media (max-width: 480px) {
-  body {
-    font-size: 13px;
-  }
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-  section {
-    padding: 1rem;
-    margin: 0.5rem;
-  }
-  .projects .project-list {
-    grid-template-columns: 1fr;
-  }
+    body {
+        font-size: 12px; /* Further reduce font size for smaller devices */
+    }
+    header {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: center; /* Center align */
+        padding: 0.5rem;
+    }
+    footer {
+        text-align: center; /* Ensure footer text is centered */
+        padding: 0.5rem;
+        font-size: 0.7rem; /* Adjust footer text size */
+    }
+    section {
+        padding: 0.8rem; /* Reduce padding for sections */
+    }
+    h1 {
+        font-size: 1.5em; /* Smaller headings for mobile */
+    }
+    .projects .project-list {
+        grid-template-columns: 1fr; /* Single column layout for projects */
+        gap: 0.8rem; /* Adjust spacing between projects */
+    }
+    .projects .project-item {
+        padding: 1rem; /* Reduce padding for project items */
+    }
+}
+.certifications {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.certifications h2 {
+    text-align: center;
+    color: #333;
+}
+
+.certifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.certifications a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.certifications a:hover {
+    text-decoration: underline;
 }
