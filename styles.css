@@ -81,6 +81,7 @@ header {
 header .logo {
   font-size: 1.5rem;
   font-weight: 600;
+  text-items: center;
 }
 
 header ul {
@@ -233,7 +234,6 @@ footer {
 
   footer {
     padding: 0.5rem;
-    font-size: 0.9rem;
   }
 
   .projects .project-list {
@@ -251,7 +251,6 @@ footer {
 
   footer {
     padding: 0.5rem;
-    font-size: 0.8rem;
   }
 
   section {
