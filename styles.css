@@ -1,33 +1,37 @@
 :root {
   /* Default (Light Mode) Variables */
-  --bg-color: #ffffff; /* Light background color */
-  --text-color: #000000; /* Light text color */
-  --link-color: #007acc; /* Light link/button color */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007acc;
+  --accent-bg: #f8f9fa;
+  --accent-border: #ddd;
 }
 
 body {
-  background-color: var(--bg-color); /* Background adapts to theme */
-  color: var(--text-color); /* Text adapts to theme */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #1e90ff;
+  --accent-bg: #1e1e1e;
+  --accent-border: #333;
 }
 
 a {
-  color: var(--link-color); /* Links adapt to theme */
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* Optional hover effect */
-}
-
-/* Dark Mode Variables */
-body.dark-mode {
-  --bg-color: #121212; /* Dark background color */
-  --text-color: #ffffff; /* Dark text color */
-  --link-color: #1e90ff; /* Dark link/button color */
+  text-decoration: underline;
 }
 
 /* Theme Toggle Button */
@@ -43,8 +47,8 @@ body.dark-mode {
 
 /* Header */
 header {
-  background: var(--link-color); /* Adapt to theme */
-  color: var(--bg-color); /* Text color adapts to theme */
+  background: var(--link-color);
+  color: var(--bg-color);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -63,11 +67,12 @@ header ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 header ul li a {
-  text-decoration: none;
-  color: var(--bg-color); /* Adapt to theme */
+  color: var(--bg-color);
   font-weight: 400;
 }
 
@@ -75,12 +80,12 @@ header ul li a {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: var(--bg-color); /* Adapt to theme */
+  background: var(--bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero span {
-  color: var(--link-color); /* Accent color */
+  color: var(--link-color);
 }
 
 /* General Section Styling */
@@ -89,7 +94,7 @@ section {
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -103,12 +108,12 @@ section {
 }
 
 .project-item {
-  background: var(--bg-color);
+  background: var(--accent-bg);
   color: var(--text-color);
   padding: 1.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--accent-border);
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-item h3 {
@@ -118,7 +123,7 @@ section {
 /* Footer */
 footer {
   text-align: center;
-  background: var(--link-color); /* Adapt to theme */
+  background: var(--link-color);
   color: var(--bg-color);
   padding: 1rem 0;
   margin-top: 2rem;
@@ -129,6 +134,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .profile-photo {
@@ -155,92 +162,101 @@ footer {
   background-color: #005f99;
 }
 
-/* For devices with a max-width of 768px (tablets, small screens) */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Slightly smaller text for smaller screens */
-    }
-    section {
-        padding: 1rem; /* Adjust section padding */
-    }
-    h1 {
-        font-size: 1.8em; /* Slightly smaller heading */
-    }
-    header {
-        padding: 0.5rem 1rem; /* Adjust header padding */
-        font-size: 0.9rem; /* Adjust text size in header */
-    }
-    footer {
-        padding: 0.5rem; /* Adjust footer padding */
-        font-size: 0.8rem; /* Smaller footer text */
-    }
-    .projects .project-list {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust project layout */
-        gap: 1rem;
-    }
-}
-
-/* For devices with a max-width of 480px (mobile phones) */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px; /* Further reduce font size for smaller devices */
-    }
-    header {
-        flex-direction: column; /* Stack header content vertically */
-        align-items: center; /* Center align */
-        padding: 0.5rem;
-    }
-    footer {
-        text-align: center; /* Ensure footer text is centered */
-        padding: 0.5rem;
-        font-size: 0.7rem; /* Adjust footer text size */
-    }
-    section {
-        padding: 0.8rem; /* Reduce padding for sections */
-    }
-    h1 {
-        font-size: 1.5em; /* Smaller headings for mobile */
-    }
-    .projects .project-list {
-        grid-template-columns: 1fr; /* Single column layout for projects */
-        gap: 0.8rem; /* Adjust spacing between projects */
-    }
-    .projects .project-item {
-        padding: 1rem; /* Reduce padding for project items */
-    }
-}
+/* Certifications Section */
 .certifications {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    text-align: left;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: left;
 }
 
 .certifications h2 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: var(--text-color);
 }
 
 .certifications ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
+  list-style: none;
+  padding: 0;
 }
 
 .certifications li {
-    background: #f8f9fa;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: left;
+  background: var(--accent-bg);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--accent-border);
 }
 
 .certifications a {
-    color: #007bff;
-    text-decoration: none;
-    text-align: left;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 .certifications a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .projects .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .projects .project-list {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .project-item {
+    padding: 1rem;
+  }
 }
