@@ -83,6 +83,10 @@ header ul li a {
   color: var(--link-color); /* Accent color */
 }
 
+main {
+  flex: 1; /* Take remaining vertical space */
+}
+
 /* General Section Styling */
 section {
   text-align: center;
