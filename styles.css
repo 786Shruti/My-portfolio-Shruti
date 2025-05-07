@@ -6,26 +6,25 @@
   --accent-border: #ddd;
 }
 
-body {
+/* Full-height layout for sticky footer */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   font-size: 16px;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  /* Flexbox Layout */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
-html {
-  height: 100%;
-}
-
-/* Dark Mode Overrides */
+/* Dark Mode Variables */
 body.dark-mode {
   --bg-color: #121212;
   --text-color: #ffffff;
@@ -34,11 +33,12 @@ body.dark-mode {
   --accent-border: #333;
 }
 
+/* Main content area pushes footer down */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center content */
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -75,6 +75,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1rem; /* Unified with body font size */
 }
 
 header .logo {
@@ -86,8 +87,8 @@ header ul {
   list-style: none;
   display: flex;
   gap: 1rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 header ul li a {
@@ -227,12 +228,12 @@ footer {
 
   header {
     padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    /* No font-size override to maintain consistency */
   }
 
   footer {
     padding: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .projects .project-list {
@@ -250,7 +251,7 @@ footer {
 
   footer {
     padding: 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   section {
