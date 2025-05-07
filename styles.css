@@ -1,26 +1,41 @@
 :root {
-  /* Default (Light Mode) Variables */
   --bg-color: #ffffff;
   --text-color: #000000;
   --link-color: #007acc;
+  --font: Arial, sans-serif;
+  --font-size: 16px;
+}
+
+/* Apply font and box sizing globally */
+* {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
-  flex: 1; /* Ensures main content takes up full available height */
+  flex: 1;
 }
 
+/* Dark Mode */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #1e90ff;
+}
+
+/* Links */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -28,13 +43,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-/* Dark Mode Variables */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #ffffff;
-  --link-color: #1e90ff;
 }
 
 /* Theme Toggle Button */
@@ -62,8 +70,8 @@ header {
 }
 
 header .logo {
-  font-size: 1.5rem;
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 header ul {
@@ -147,7 +155,7 @@ footer {
   transition: border-color 0.3s ease;
 }
 
-/* Button Styling */
+/* Buttons */
 .btn {
   background-color: var(--link-color);
   color: var(--bg-color);
@@ -191,31 +199,15 @@ footer {
 
 .certifications a {
   color: var(--link-color);
-  text-decoration: none;
-}
-
-.certifications a:hover {
-  text-decoration: underline;
 }
 
 /* Responsive: Tablets and Small Screens */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
   section {
     padding: 1rem;
   }
-  h1 {
-    font-size: 1.8em;
-  }
   header {
     padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-  footer {
-    padding: 0.5rem;
-    font-size: 0.8rem;
   }
   .projects .project-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -225,24 +217,16 @@ footer {
 
 /* Responsive: Mobile Phones */
 @media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
   header {
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
   }
   footer {
-    text-align: center;
     padding: 0.5rem;
-    font-size: 0.7rem;
   }
   section {
     padding: 0.8rem;
-  }
-  h1 {
-    font-size: 1.5em;
   }
   .projects .project-list {
     grid-template-columns: 1fr;
