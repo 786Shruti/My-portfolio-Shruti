@@ -73,14 +73,10 @@ header ul li a {
 
 /* Hero Section */
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--bg-color);
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--bg-color); /* Adapt to theme */
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 0 1.5rem;
-  box-sizing: border-box;
 }
 
 .hero span {
@@ -97,13 +93,6 @@ section {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: auto; /* Let it grow with content */
-  overflow: visible;
 }
 
 
