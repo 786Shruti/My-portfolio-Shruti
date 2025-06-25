@@ -4,16 +4,23 @@
   --link-color: #007acc;
 }
 
+/* Overall Page Layout */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
   padding-bottom: 60px; /* Prevent footer overlap */
 }
 
+/* Anchor Styles */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -63,6 +70,8 @@ header ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 header ul li a {
@@ -79,35 +88,70 @@ header ul li a {
   justify-content: center;
   align-items: center;
   background: var(--bg-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
   padding: 0 1.5rem;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative;
+  text-align: center;
 }
 
-/* Clean spacing for inner hero text */
 .hero * {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 
 .hero span {
   color: var(--link-color);
 }
 
-/* General Section Styling */
-section {
-  text-align: center;
+/* About Section */
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding: 2rem;
+  padding: 3rem 2rem;
   margin: 1rem 0;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Skills Section */
+.skills {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 3rem 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.skills li {
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
 }
 
 /* Projects Section */
@@ -128,118 +172,6 @@ section {
 
 .project-item h3 {
   color: var(--link-color);
-}
-
-/* Footer (Fixed) */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background: var(--link-color);
-  color: var(--bg-color);
-  padding: 1rem 0;
-  z-index: 999;
-}
-
-/* Profile Section */
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--link-color);
-  transition: border-color 0.3s ease;
-}
-
-/* Button Styling */
-.btn {
-  background-color: var(--link-color);
-  color: var(--bg-color);
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 0.7rem 1.5rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #005f99;
-}
-
-/* Media Queries */
-
-/* Tablets & Small Screens */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  section {
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  header {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  footer {
-    padding: 0.5rem;
-    font-size: 0.8rem;
-  }
-
-  .projects .project-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-}
-
-/* Mobile Phones */
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-  }
-
-  footer {
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 0.7rem;
-  }
-
-  section {
-    padding: 0.8rem;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  .projects .project-list {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-
-  .projects .project-item {
-    padding: 1rem;
-  }
 }
 
 /* Certifications Section */
@@ -275,7 +207,114 @@ footer {
   text-decoration: underline;
 }
 
-/* Large Screens (Laptops, Desktops) */
+/* Footer (sticks to bottom on all screens) */
+footer {
+  background: var(--link-color);
+  color: var(--bg-color);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--link-color);
+  transition: border-color 0.3s ease;
+}
+
+/* Button Styling */
+.btn {
+  background-color: var(--link-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005f99;
+}
+
+/* Responsive Layouts */
+
+/* Tablets */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .projects .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .projects .project-list {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .projects .project-item {
+    padding: 1rem;
+  }
+}
+
+/* Laptops & Desktops */
 @media (min-width: 1024px) {
   body {
     font-size: 16px;
