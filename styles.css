@@ -242,3 +242,50 @@ footer {
 .certifications a:hover {
     text-decoration: underline;
 }
+/* === Add responsiveness for large screens (laptops/desktops) === */
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px; /* Slightly bigger for readability */
+    }
+
+    section {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 2rem 3rem;
+    }
+
+    .project-item {
+        max-width: 600px;
+        margin: auto;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #ccc;
+    }
+
+    .projects .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+
+    .certifications {
+        max-width: 1000px;
+        padding: 2rem 3rem;
+    }
+
+    .certifications li {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        padding: 1.2rem;
+    }
+
+    header ul li a {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.8rem;
+    }
+}
