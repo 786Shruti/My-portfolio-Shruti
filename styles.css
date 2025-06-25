@@ -77,7 +77,14 @@ header ul li a {
   padding: 4rem 2rem;
   background: var(--bg-color); /* Adapt to theme */
   transition: background-color 0.3s ease, color 0.3s ease;
+
+  height: 100vh; /* Takes full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center;     /* Horizontally center content */
 }
+
 
 .hero span {
   color: var(--link-color); /* Accent color */
