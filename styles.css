@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding-bottom: 60px; /* Prevent footer overlap */
 }
 
 a {
@@ -82,6 +83,14 @@ header ul li a {
   padding: 0 1.5rem;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
+}
+
+/* Clean spacing for inner hero text */
+.hero * {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .hero span {
@@ -98,8 +107,6 @@ section {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  min-height: auto; /* Let sections grow with content */
   display: block;
 }
 
@@ -123,15 +130,17 @@ section {
   color: var(--link-color);
 }
 
-/* Footer */
+/* Footer (Fixed) */
 footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
   background: var(--link-color);
   color: var(--bg-color);
   padding: 1rem 0;
+  z-index: 999;
 }
 
 /* Profile Section */
