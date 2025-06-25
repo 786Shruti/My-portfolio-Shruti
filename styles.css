@@ -85,7 +85,7 @@ header ul li a {
 
 /* General Section Styling */
 section {
-  text-align: center;
+  align: center;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
@@ -96,7 +96,7 @@ section {
   min-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: justify;
 }
 
 
