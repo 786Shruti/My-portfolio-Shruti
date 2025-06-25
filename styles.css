@@ -105,6 +105,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: auto; /* Let it grow with content */
+  overflow: visible;
 }
 
 
