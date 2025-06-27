@@ -9,8 +9,8 @@ body {
   background-color: var(--bg-color); /* Background adapts to theme */
   color: var(--text-color); /* Text adapts to theme */
   font-family: Arial, sans-serif;
-  margin: 5px;
-  padding: 5px;
+  margin: 0;
+  padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
@@ -45,7 +45,7 @@ body.dark-mode {
 header {
   background: var(--link-color); /* Adapt to theme */
   color: var(--bg-color); /* Text color adapts to theme */
-  padding: 1rem 2rem;
+  padding: 0 1.5px;
   position: sticky;
   top: 0;
   z-index: 1000;
