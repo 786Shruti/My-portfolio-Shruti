@@ -55,11 +55,13 @@ header {
 }
 
 header .logo {
+  padding:1.5px;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 header ul {
+  padding:0;
   list-style: none;
   display: flex;
   gap: 1rem;
