@@ -1,70 +1,294 @@
-/* === Root Theme Variables === */ :root { --bg-color: #ffffff; --text-color: #000000; --link-color: #007acc; }
+:root {
+  /* Default (Light Mode) Variables */
+  --bg-color: #ffffff; /* Light background color */
+  --text-color: #000000; /* Light text color */
+  --link-color: #007acc; /* Light link/button color */
+}
 
-body { background-color: var(--bg-color); color: var(--text-color); font-family: Arial, sans-serif; margin: 0; padding: 0; transition: background-color 0.3s ease, color 0.3s ease; padding-bottom: 80px; /* prevent footer overlap */ overflow-x: hidden; text-align: center; }
+body {
+  background-color: var(--bg-color); /* Background adapts to theme */
+  color: var(--text-color); /* Text adapts to theme */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
 
-body.dark-mode { --bg-color: #121212; --text-color: #ffffff; --link-color: #1e90ff; }
+a {
+  color: var(--link-color); /* Links adapt to theme */
+  text-decoration: none;
+}
 
-a { color: var(--link-color); text-decoration: none; }
+a:hover {
+  text-decoration: underline; /* Optional hover effect */
+}
 
-a:hover { text-decoration: underline; }
+/* Dark Mode Variables */
+body.dark-mode {
+  --bg-color: #121212; /* Dark background color */
+  --text-color: #ffffff; /* Dark text color */
+  --link-color: #1e90ff; /* Dark link/button color */
+}
 
-/* === Theme Button === */ .theme-btn { background: var(--link-color); color: var(--bg-color); border: none; padding: 0.4rem 0.8rem; cursor: pointer; border-radius: 5px; transition: background-color 0.3s ease, color 0.3s ease; font-size: 0.8rem; white-space: nowrap; }
+/* Theme Toggle Button */
+.theme-btn {
+  background: var(--link-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-/* === Header Navigation === */ header { background: var(--link-color); color: var(--bg-color); padding: 0.5rem 1rem; position: sticky; top: 0; z-index: 1000; }
+/* Header */
+header {
+  background: var(--link-color); /* Adapt to theme */
+  color: var(--bg-color); /* Text color adapts to theme */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; overflow-x: auto; gap: 1rem; }
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
-.logo { font-size: 1.2rem; font-weight: bold; white-space: nowrap; margin-right: auto; }
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
 
-nav ul { list-style: none; display: flex; gap: 0.8rem; padding: 0; margin: 0; flex-wrap: nowrap; overflow-x: auto; }
+header ul li a {
+  text-decoration: none;
+  color: var(--bg-color); /* Adapt to theme */
+  font-weight: 400;
+}
 
-nav ul li a { color: var(--bg-color); font-weight: 500; padding: 0.3rem; font-size: 0.85rem; white-space: nowrap; }
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--bg-color); /* Adapt to theme */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-/* === Hero Section === */ .hero { text-align: center; padding: 2rem 1rem; background: var(--bg-color); }
+.hero span {
+  color: var(--link-color); /* Accent color */
+}
 
-.hero span { color: var(--link-color); }
+/* Improved General Section Styling */
+section {
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  justify-content: center;
+}
 
-/* === Container Wrapper === */ .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; text-align: center; }
 
-/* === Projects Section === */ .projects { background-color: var(--bg-color); color: var(--text-color); padding: 1.5rem 0.5rem; text-align: center; }
+/* Projects Section */
+.projects .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
 
-.project-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; justify-content: center; }
+.project-item {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-.project-item { background: var(--bg-color); color: var(--text-color); padding: 1rem; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: background-color 0.3s ease, color 0.3s ease; text-align: center; }
+.project-item h3 {
+  color: var(--link-color);
+}
 
-.project-item h3, .project-item h4 { color: var(--link-color); }
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: var(--link-color);
+  color: var(--bg-color);
+  padding: 1rem 0;
+}
 
-/* === Footer === */ footer { position: fixed; bottom: 0; width: 100%; text-align: center; background: var(--link-color); color: var(--bg-color); padding: 1rem 0; font-size: 0.9rem; }
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-/* === Responsive Styling === */ @media (max-width: 768px) { nav { flex-wrap: nowrap; flex-direction: row; }
+.profile-photo {
+  position: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--link-color);
+  transition: border-color 0.3s ease;
+}
 
-nav ul { flex-wrap: nowrap; flex-direction: row; gap: 0.5rem; }
+/* Button Styling */
+.btn {
+  background-color: var(--link-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-nav ul li a { font-size: 0.75rem; }
+.btn:hover {
+  background-color: #005f99;
+}
 
-.hero { padding: 1.5rem 1rem; }
+/* For devices with a max-width of 768px (tablets, small screens) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly smaller text for smaller screens */
+    }
+    section {
+        padding: 1rem; /* Adjust section padding */
+    }
+    h1 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+    header {
+        padding: 0.5rem 1rem; /* Adjust header padding */
+        font-size: 0.9rem; /* Adjust text size in header */
+    }
+    footer {
+        padding: 0.5rem; /* Adjust footer padding */
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+    .projects .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust project layout */
+        gap: 1rem;
+    }
+}
 
-.project-list { grid-template-columns: 1fr; }
+/* For devices with a max-width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Further reduce font size for smaller devices */
+    }
+    header {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: center; /* Center align */
+        padding: 0.5rem;
+    }
+    footer {
+        text-align: center; /* Ensure footer text is centered */
+        padding: 0.5rem;
+        font-size: 0.7rem; /* Adjust footer text size */
+    }
+    section {
+        padding: 0.8rem; /* Reduce padding for sections */
+    }
+    h1 {
+        font-size: 1.5em; /* Smaller headings for mobile */
+    }
+    .projects .project-list {
+        grid-template-columns: 1fr; /* Single column layout for projects */
+        gap: 0.8rem; /* Adjust spacing between projects */
+    }
+    .projects .project-item {
+        padding: 1rem; /* Reduce padding for project items */
+    }
+}
+.certifications {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
 
-.theme-btn { font-size: 0.7rem; padding: 0.3rem 0.6rem; } }
+.certifications h2 {
+    text-align: center;
+    color: #333;
+}
 
-@media (min-width: 1024px) { .project-item { max-width: 600px; margin: auto; }
+.certifications ul {
+    list-style: none;
+    padding: 0;
+}
 
-.project-list { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; } }
+.certifications li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
 
-/* === Certifications Styling === */ .certifications { max-width: 1000px; margin: auto; padding: 1.5rem 0.5rem; text-align: center; }
+.certifications a {
+    color: #007bff;
+    text-decoration: none;
+}
 
-.certifications h2 { text-align: center; color: var(--link-color); margin-bottom: 1rem; }
+.certifications a:hover {
+    text-decoration: underline;
+}
+/* === Add responsiveness for large screens (laptops/desktops) === */
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px; /* Slightly bigger for readability */
+    }
 
-.certifications ul { list-style: none; padding: 0; margin: 0 auto; text-align: center; max-width: 600px; }
+    section {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 2rem 3rem;
+    }
 
-.certifications li { background: #f8f9fa; margin: 8px auto; padding: 10px; border-radius: 5px; color: #333; text-align: center; }
+    .project-item {
+        max-width: 600px;
+        margin: auto;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #ccc;
+    }
 
-.certifications a { color: #007bff; text-decoration: none; }
+    .projects .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
 
-.certifications a:hover { text-decoration: underline; }
+    .certifications {
+        max-width: 1000px;
+        padding: 2rem 3rem;
+    }
 
-/* === Profile Section Centered === */ .profile { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; margin: 1rem 0; }
+    .certifications li {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        padding: 1.2rem;
+    }
 
-.profile-photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--link-color); transition: border-color 0.3s ease; display: block; margin: 0 auto; }
+    header ul li a {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
 
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.8rem;
+    }
+}
