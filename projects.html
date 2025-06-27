@@ -18,11 +18,62 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <!-- Theme Toggle Button -->
       <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
     </nav>
   </header>
-
   <main>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+<div class="project-item"> 
+    <h3>Quiz App with Gamification</h3>
+
+    <p>A web-based quiz application with interactive gamification features, answer review, and score tracking.</p>
+
+    <a href="https://github.com/786Shruti/Quiz-app" target="_blank">View on GitHub</a><br>
+
+    <a href="https://quizappshruti.netlify.app/" target="_blank">Live Demo on Netlify</a>
+</div>
+<div class="project-item">
+        <h3>Freelance Marketplace</h3>
+        <p>A platform connecting clients posting jobs with freelancers applying for them. Use of MySQL, PHP.</p>
+        <a href="https://github.com/786Shruti/Freelancer_Marketplace" target="_blank">View on GitHub</a><br>
+        <a href="http://freelancermarketplaceshruti.infinityfreeapp.com/" target="_blank">Live Demo</a>
+      </div>
+<div class="project-item">
+        <h3>Expense Tracker</h3>
+        <p>A deep-level project to track expenses built using PHP and MySQL.</p>
+        <a href="https://github.com/786Shruti/Expense-Tacker-miniproject" target="_blank">View on GitHub</a><br>
+        <a href="http://expensetrackershruti.great-site.net/" target="_blank">Live Demo</a>
+</div>
+<div class="project-item">
+        <h3>Image Gallery</h3>
+        <p>An advanced image gallery with Responsive Layout, Dynamic Image Addition, Image Modal, Data Persistence.</p>
+        <a href="https://github.com/786Shruti/Image-gallery" target="_blank">View on GitHub</a><br>
+        <a href="http://imagegallery.infinityfreeapp.com/" target="_blank">Live Demo</a>
+              </div>
+<div class="project-item">
+        <h3>CSChatBot</h3>
+        <p> A simple web and cloud FAQ chatbot built with Dialogflow, HTML, CSS, and JavaScript, providing answers to frequently asked questions for computer engineering students and tech enthusiasts.</p>
+        <a href="https://github.com/786Shruti/Simple-chatbot-" target="_blank">View on GitHub</a><br>
+        <a href="https://786shruti.github.io/Simple-chatbot-/" target="_blank">Live Demo</a>
+      </div>
+      <div class="project-item">
+        <h3>Youtube Summarizer</h3>
+        <p> A simple app which provides you basic summary of any youtube video.</p>
+        <a href="https://github.com/786Shruti/Youtube-summarizer/" target="_blank">View on GitHub</a><br>
+        <a href="https://silly-kheer-9b4b78.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+      <div class="project-item">
+        <h3>Personal portfolio</h3>
+        <p>A advanced portffolio to showcase my achievements and much more.</p>
+        <a href="https://github.com/786Shruti/My-portfolio-Shruti" target="_blank">View on GitHub</a><br>
+        <a href="https://786shruti.github.io/My-portfolio-Shruti/" target="_blank">Live Demo on GitHub</a>
+      </div>
+<div class="project-item">
+        <h3>Note Making Application</h3>
     <section id="projects" class="projects">
       <h2>Projects</h2>
 
@@ -133,23 +184,29 @@
       </div>
     </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Shruti Pol. All Rights Reserved.</p>
   </footer>
 
   <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
 
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-    }
+  // Check saved theme in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
 
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-  </script>
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+</script>
+
 </body>
 </html>
+
+
+Make classification in projects as it will look good like you did in certificate 
+
+Full code please 
