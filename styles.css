@@ -299,3 +299,36 @@ footer {
   margin: 0 auto;
   padding: 0 1.5rem; /* Adds space on left/right */
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping if needed */
+  padding: 0 1rem;
+}
+
+nav .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap; /* Allows nav items to wrap if needed */
+  gap: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.theme-btn {
+  margin-left: auto;
+}
