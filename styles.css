@@ -57,7 +57,7 @@ a:hover {
 header {
   background: var(--link-color);
   color: var(--bg-color);
-  padding: 0.8rem 1.5rem;
+  padding: 0.5rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
