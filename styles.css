@@ -1,36 +1,35 @@
+/* === Root Theme Variables === */
 :root {
-  /* Default (Light Mode) Variables */
-  --bg-color: #ffffff; /* Light background color */
-  --text-color: #000000; /* Light text color */
-  --link-color: #007acc; /* Light link/button color */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007acc;
 }
 
 body {
-  background-color: var(--bg-color); /* Background adapts to theme */
-  color: var(--text-color); /* Text adapts to theme */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
-  color: var(--link-color); /* Links adapt to theme */
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* Optional hover effect */
+  text-decoration: underline;
 }
 
-/* Dark Mode Variables */
 body.dark-mode {
-  --bg-color: #121212; /* Dark background color */
-  --text-color: #ffffff; /* Dark text color */
-  --link-color: #1e90ff; /* Dark link/button color */
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #1e90ff;
 }
 
-/* Theme Toggle Button */
+/* === Theme Button === */
 .theme-btn {
   background: var(--link-color);
   color: var(--bg-color);
@@ -39,67 +38,73 @@ body.dark-mode {
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 1rem;
 }
 
-/* Header */
+/* === Header === */
 header {
-  background: var(--link-color); /* Adapt to theme */
-  color: var(--bg-color); /* Text color adapts to theme */
-  padding: 0 1.5px;
+  background: var(--link-color);
+  color: var(--bg-color);
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 0.5rem 1rem;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-header .logo {
-  padding:1.5px;
+nav .logo {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-header ul {
-  padding:0;
-  list-style: none;
+nav ul {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-header ul li a {
+nav ul li a {
+  color: var(--bg-color);
   text-decoration: none;
-  color: var(--bg-color); /* Adapt to theme */
-  font-weight: 400;
 }
 
-/* Hero Section */
+/* === Hero Section === */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: var(--bg-color); /* Adapt to theme */
+  background: var(--bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero span {
-  color: var(--link-color); /* Accent color */
+  color: var(--link-color);
 }
 
-/* Improved General Section Styling */
+/* === Section === */
 section {
   text-align: center;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
-  justify-content: center;
+  max-width: 1200px;
 }
 
-
-/* Projects Section */
+/* === Projects === */
 .projects .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -119,7 +124,7 @@ section {
   color: var(--link-color);
 }
 
-/* Footer */
+/* === Footer === */
 footer {
   position: fixed;
   bottom: 0;
@@ -130,7 +135,7 @@ footer {
   padding: 1rem 0;
 }
 
-/* Profile Section */
+/* === Profile Section === */
 .profile {
   display: flex;
   align-items: center;
@@ -138,7 +143,6 @@ footer {
 }
 
 .profile-photo {
-  position: center;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -147,7 +151,7 @@ footer {
   transition: border-color 0.3s ease;
 }
 
-/* Button Styling */
+/* === Button === */
 .btn {
   background-color: var(--link-color);
   color: var(--bg-color);
@@ -162,173 +166,83 @@ footer {
   background-color: #005f99;
 }
 
-/* For devices with a max-width of 768px (tablets, small screens) */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Slightly smaller text for smaller screens */
-    }
-    section {
-        padding: 1rem; /* Adjust section padding */
-    }
-    h1 {
-        font-size: 1.8em; /* Slightly smaller heading */
-    }
-    header {
-        padding: 0.5rem 1rem; /* Adjust header padding */
-        font-size: 0.9rem; /* Adjust text size in header */
-    }
-    footer {
-        padding: 0.5rem; /* Adjust footer padding */
-        font-size: 0.8rem; /* Smaller footer text */
-    }
-    .projects .project-list {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust project layout */
-        gap: 1rem;
-    }
-}
-
-/* For devices with a max-width of 480px (mobile phones) */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px; /* Further reduce font size for smaller devices */
-    }
-    header {
-        flex-direction: column; /* Stack header content vertically */
-        align-items: center; /* Center align */
-        padding: 0.5rem;
-    }
-    footer {
-        text-align: center; /* Ensure footer text is centered */
-        padding: 0.5rem;
-        font-size: 0.7rem; /* Adjust footer text size */
-    }
-    section {
-        padding: 0.8rem; /* Reduce padding for sections */
-    }
-    h1 {
-        font-size: 1.5em; /* Smaller headings for mobile */
-    }
-    .projects .project-list {
-        grid-template-columns: 1fr; /* Single column layout for projects */
-        gap: 0.8rem; /* Adjust spacing between projects */
-    }
-    .projects .project-item {
-        padding: 1rem; /* Reduce padding for project items */
-    }
-}
+/* === Certifications === */
 .certifications {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
 }
 
 .certifications h2 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: #333;
 }
 
 .certifications ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .certifications li {
-    background: #f8f9fa;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+  background: #f8f9fa;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .certifications a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.certifications a:hover {
-    text-decoration: underline;
-}
-/* === Add responsiveness for large screens (laptops/desktops) === */
-@media (min-width: 1024px) {
-    body {
-        font-size: 16px; /* Slightly bigger for readability */
-    }
-
-    section {
-        max-width: 1000px;
-        margin: 2rem auto;
-        padding: 2rem 3rem;
-    }
-
-    .project-item {
-        max-width: 600px;
-        margin: auto;
-        padding: 2rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        border: 1px solid #ccc;
-    }
-
-    .projects .project-list {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-        padding: 1rem 2rem;
-    }
-
-    .certifications {
-        max-width: 1000px;
-        padding: 2rem 3rem;
-    }
-
-    .certifications li {
-        font-size: 1.05rem;
-        line-height: 1.6;
-        padding: 1.2rem;
-    }
-
-    header ul li a {
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
-    }
-
-    .btn {
-        font-size: 1rem;
-        padding: 0.8rem 1.8rem;
-    }
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem; /* Adds space on left/right */
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Allows wrapping if needed */
-  padding: 0 1rem;
-}
-
-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap; /* Allows nav items to wrap if needed */
-  gap: 0.6rem;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  list-style: none;
-}
-
-nav ul li a {
-  color: var(--bg-color);
+  color: #007bff;
   text-decoration: none;
 }
 
-.theme-btn {
-  margin-right: auto;
+.certifications a:hover {
+  text-decoration: underline;
+}
+
+/* === Media Queries === */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  section {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  footer {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .projects .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  footer {
+    font-size: 0.7rem;
+  }
+  section {
+    padding: 0.8rem;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  .projects .project-list {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .projects .project-item {
+    padding: 1rem;
+  }
 }
