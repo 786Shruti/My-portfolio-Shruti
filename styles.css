@@ -142,7 +142,7 @@ footer {
   line-height: 1.4;
   width: 100%;
   margin-top: auto;
-  position: fixed;
+  position: relative;
 }
 
 .profile {
