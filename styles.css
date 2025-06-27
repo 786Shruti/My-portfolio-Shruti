@@ -308,7 +308,7 @@ nav {
 }
 
 nav .logo {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -330,5 +330,5 @@ nav ul li a {
 }
 
 .theme-btn {
-  margin-left: auto;
+  margin-right: auto;
 }
