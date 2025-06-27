@@ -72,3 +72,16 @@ nav ul li a { color: var(--bg-color); text-decoration: none; }
 
 .theme-btn { margin-right: auto; }
 
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
