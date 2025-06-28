@@ -144,8 +144,28 @@ section {
 }
 
 /* Skills layout */
-.skills-list div {
-  margin: 0.5rem 0;
+.skills-section {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.skill-category h4 {
+  margin-bottom: 0.2rem;
+  color: var(--link-color);
+}
+
+.skill-category p {
+  margin: 0;
+  color: var(--text-color);
 }
 
 /* Profile photo */
