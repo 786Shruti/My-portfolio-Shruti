@@ -42,9 +42,35 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center all nav content */
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Keep row layout, wrap if needed on smaller screens */
+  gap: 1rem;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row; /* Always horizontal */
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.theme-btn {
+  margin-left: 2rem;
 }
 
 .logo {
