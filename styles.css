@@ -198,14 +198,12 @@ footer {
     padding: 0.5rem 1rem;
   }
   .btn {
+    align:center;
     font-size: 0.85rem;
   }
 }
 h1,h2,h3,h4{
   text-align:center;
-  maryign-top:1rem;
+  margin-top:1rem;
   margin-bottom:0.5rem;
-}
-p,li,div,section{
-  text-align:justify;
 }
