@@ -60,6 +60,7 @@ header ul {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  text-align:center;
 }
 
 header ul li a {
@@ -219,7 +220,7 @@ footer {
     font-size: 0.9rem;
   }
   .btn {
-    align:center;
+    text-align:center;
     font-size: 0.9rem;
   }
   p, li, div, section {
