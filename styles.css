@@ -12,10 +12,9 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
-  line-height: 1.6;
 }
 
-/* Dark mode overrides */
+/* Dark mode override */
 body.dark-mode {
   --bg-color: #121212;
   --text-color: #ffffff;
@@ -30,7 +29,11 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header */
+header, header ul li a, nav .logo {
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
 header {
   background: var(--link-color);
   color: var(--bg-color);
@@ -38,18 +41,20 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   font-weight: 600;
-  font-size: 0.95rem;
 }
 
 header ul {
@@ -58,13 +63,11 @@ header ul {
   gap: 1rem;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 header ul li a {
   color: var(--bg-color);
   font-weight: 400;
-  font-size: 0.95rem;
 }
 
 .theme-btn {
@@ -74,15 +77,16 @@ header ul li a {
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   border-radius: 4px;
-  font-size: 0.85rem;
   transition: background-color 0.3s ease;
 }
 
-/* Layout */
+main {
+  padding: 1rem;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
   text-align: justify;
 }
 
@@ -96,22 +100,23 @@ section {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hero */
 .hero {
   text-align: center;
   padding: 3rem 2rem;
 }
+
 .hero span {
   color: var(--link-color);
   font-weight: bold;
 }
 
-/* Projects Grid */
+/* Projects Section */
 .projects .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
+
 .project-item {
   background: var(--bg-color);
   color: var(--text-color);
@@ -120,13 +125,22 @@ section {
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .project-item h4 {
   color: var(--link-color);
 }
 
-/* Skills layout */
-.skills-list div {
-  margin: 0.5rem 0;
+/* Footer */
+footer {
+  text-align: center;
+  background: var(--link-color);
+  color: var(--bg-color);
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 /* Profile photo */
@@ -140,7 +154,7 @@ section {
   margin: 1rem auto;
 }
 
-/* Buttons */
+/* Button Style */
 .btn {
   background-color: var(--link-color);
   color: var(--bg-color);
@@ -157,29 +171,29 @@ section {
   background-color: #005f99;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  background: var(--link-color);
+/* Back to Top Button */
+#scrollBtn {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  background-color: var(--link-color);
   color: var(--bg-color);
-  padding: 1rem;
-  font-size: 0.9rem;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+#scrollBtn:hover {
+  background-color: #005f99;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   body {
     font-size: 0.9rem;
-  }
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  header ul {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
   }
   .projects .project-list {
     grid-template-columns: 1fr;
@@ -190,10 +204,26 @@ footer {
   body {
     font-size: 0.85rem;
   }
+
   header {
     padding: 0.5rem 1rem;
+    flex-direction: column;
+    align-items: center;
   }
-  .btn {
-    font-size: 0.85rem;
+
+  header ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  header ul li {
+    margin: 0.25rem 0.6rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    padding: 0.6rem;
   }
 }
