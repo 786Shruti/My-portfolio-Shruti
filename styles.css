@@ -38,35 +38,18 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  text-align:center;
 }
 
 nav {
   display: flex;
-  justify-content: center; /* Center all nav content */
+  justify-content: center; /* Center the full nav content */
   align-items: center;
-  flex-wrap: wrap; /* Keep row layout, wrap if needed on smaller screens */
-  gap: 1rem;
-}
-
-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: 2rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row; /* Always horizontal */
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  color: var(--bg-color);
-  text-decoration: none;
-  font-size: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Ensure it's centered within header */
 }
 
 .theme-btn {
