@@ -47,10 +47,6 @@ section h2 { margin-bottom: 1rem; }
 
 /* Footer */ footer { background: var(--link-color); color: var(--bg-color); text-align: center; padding: 1rem; }
 
-/* Scroll Button */ #scroll-top-btn { position: fixed; bottom: 25px; right: 25px; background: var(--link-color); color: var(--bg-color); border: none; padding: 0.8rem; border-radius: 50%; display: none; z-index: 999; transition: background 0.3s; }
-
-#scroll-top-btn:hover { background: #005f99; }
-
 /* Responsive Design */ @media (max-width: 768px) { nav ul { flex-direction: column; gap: 0.5rem; } .project-list { grid-template-columns: 1fr; } html, body { font-size: 13px; } }
 
 @media (max-width: 480px) { html, body { font-size: 12px; } section { padding: 1rem; } header, footer { text-align: center; } nav { flex-direction: column; align-items: center; } }
