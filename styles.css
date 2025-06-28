@@ -188,6 +188,9 @@ footer {
   .projects .project-list {
     grid-template-columns: 1fr;
   }
+  p, li, div, section {
+  font-size:1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -201,9 +204,14 @@ footer {
     align:center;
     font-size: 0.85rem;
   }
+  p, li, div, section {
+  font-size:1rem;
+  }
 }
 h1,h2,h3,h4{
   text-align:center;
   margin-top:1rem;
   margin-bottom:0.5rem;
 }
+
+
