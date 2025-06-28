@@ -144,6 +144,12 @@ section {
 }
 
 /* Skills layout */
+.skills {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
 .skills-section {
   text-align: center;
   padding-top: 1rem;
@@ -194,6 +200,16 @@ section {
 }
 .btn:hover {
   background-color: #005f99;
+}
+
+.resume {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.resume .btn {
+  margin-top: 1rem;
+  display: inline-block;
 }
 
 /* Footer */
