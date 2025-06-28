@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Shruti Pol</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header>
       <div class="logo">Shruti Pol</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="skills.html">Skills</a></li>
-                <li><a href="certificate.html">Certification</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <!-- Theme Toggle Button -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certificate.html">Certification</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
       <button id="theme-toggle" class="theme-btn">Toggle Theme</button>
-    </nav>
-  </header>
-  <main>
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to connect, feel free to reach out via email or LinkedIn!</p>
-    <div class="contact-info">
-      <p>Email:polshruti131415@gmail.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/786shruti-pol/" target="_blank">linkedin.com</a></p>
-      <p>GitHub: <a href="https://github.com/786Shruti" target="_blank">github.com</a></p>
-    </div>
-  </section>
-  <section class="resume">
-    <h2>Download My Resume</h2>
-    <a href="1_page_resume SSP.pdf" download="Shruti_Pol_Resume.pdf" class="btn">Download Resume</a>
-  </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Shruti Pol. All Rights Reserved.</p>
-  </footer>
+    </header>
 
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+          <h2>Contact Me</h2>
+          <p>If you'd like to connect, feel free to reach out via email or LinkedIn!</p>
+          <div class="contact-info">
+            <p><strong>Email:</strong> polshruti131415@gmail.com</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/786shruti-pol/" target="_blank">linkedin.com/in/786shruti-pol</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/786Shruti" target="_blank">github.com/786Shruti</a></p>
+          </div>
+        </section>
+
+        <!-- Resume Download Section -->
+        <section class="resume">
+          <h2>Download My Resume</h2>
+          <a href="1_page_resume SSP.pdf" download="Shruti_Pol_Resume.pdf" class="btn">Download Resume</a>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Shruti Pol. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Theme Toggle Script -->
   <script>
-  const themeToggle = document.getElementById('theme-toggle');
-  const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-  // Check saved theme in localStorage
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-  }
+    // Check saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+    }
 
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-</script>
-
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
