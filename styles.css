@@ -52,9 +52,6 @@ nav {
   margin: 0 auto; /* Ensure it's centered within header */
 }
 
-.theme-btn {
-  margin-left: 2rem;
-}
 
 .logo {
   font-weight: 600;
@@ -78,15 +75,19 @@ header ul li a {
   font-size: 0.95rem;
 }
 
+/* Theme Toggle Button (left-aligned) */
 .theme-btn {
   background: var(--bg-color);
   color: var(--link-color);
   border: none;
   padding: 0.4rem 0.8rem;
-  cursor: pointer;
   border-radius: 4px;
-  font-size: 0.85rem;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.theme-btn:hover {
+  background-color: #e6e6e6;
 }
 
 /* Layout */
