@@ -85,6 +85,10 @@ header ul li a {
   margin: 0 auto;
   padding: 1rem;
   text-align: justify;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 section {
@@ -95,6 +99,10 @@ section {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 1rem;    /* Less space above */
+  padding-bottom: 3rem; /* More space below */
+  margin-top: 0.5rem;   /* Optional: reduce space above from outside */
+  margin-bottom: 2rem;  /* Optional: increase space below from outside */
 }
 
 /* Hero */
