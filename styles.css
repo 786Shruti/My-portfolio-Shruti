@@ -2,6 +2,7 @@
   --bg-color: #ffffff;
   --text-color: #000000;
   --link-color: #007acc;
+  --font-size:1rem;
 }
 
 body {
@@ -62,7 +63,6 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 1rem;
 }
 
 header .logo {
@@ -84,7 +84,6 @@ header ul li a {
   text-decoration: none;
   color: var(--bg-color);
   font-weight: 400;
-  font-size: 1rem;
 }
 
 .hero {
@@ -138,7 +137,6 @@ footer {
   color: var(--bg-color);
   text-align: center;
   padding: 1rem;
-  font-size: 1rem;
   line-height: 1.4;
   width: 100%;
   margin-top: auto;
@@ -237,10 +235,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-
   header {
     flex-direction: column;
     align-items: center;
@@ -250,15 +244,10 @@ footer {
   footer {
     text-align: center;
     padding: 0.5rem;
-    font-size: 0.7rem;
   }
 
   section {
     padding: 0.8rem;
-  }
-
-  h1 {
-    font-size: 1.5em;
   }
 
   .projects .project-list {
@@ -272,10 +261,6 @@ footer {
 }
 
 @media (min-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-
   section {
     max-width: 1000px;
     margin: 2rem auto;
@@ -302,18 +287,15 @@ footer {
   }
 
   .certifications li {
-    font-size: 1.05rem;
     line-height: 1.6;
     padding: 1.2rem;
   }
 
   header ul li a {
-    font-size: 1rem;
     padding: 0.5rem 0.8rem;
   }
 
   .btn {
-    font-size: 1rem;
     padding: 0.8rem 1.8rem;
   }
 }
