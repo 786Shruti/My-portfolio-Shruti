@@ -165,6 +165,9 @@ footer {
   color: var(--bg-color);
   padding: 1rem;
   font-size: 0.9rem;
+  position:fixed;
+  bottom:0;
+  width:100%;
 }
 
 /* Responsive */
