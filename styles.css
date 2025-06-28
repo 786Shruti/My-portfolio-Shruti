@@ -179,33 +179,43 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+  header{
+    font-size:0.9rem;
+  }
   header ul {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 0.5rem;
   }
+  footer{
+    font-size: 0.9rem;
+  }
   .projects .project-list {
     grid-template-columns: 1fr;
   }
   p, li, div, section {
-  font-size:1rem;
+    font-size:0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   header {
     padding: 0.5rem 1rem;
+    font-size:0.9rem;
+  }
+  footer{
+    font-size: 0.9rem;
   }
   .btn {
     align:center;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   p, li, div, section {
-  font-size:1rem;
+  font-size:0.9rem;
   }
 }
 h1,h2,h3,h4{
